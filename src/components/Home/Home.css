@@ -1,0 +1,20 @@
+.home-wrapper {
+  padding: 50px 30px;
+}
+.home-title {
+  color: #d4d4d4;
+  font-size: 27px;
+}
+.home-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+}
+.home-item {
+  color: #d4d4d4;
+}
+.home-item:hover {
+  color: #fbfbfb;
+  text-shadow: 2px 2px 9px rgba(188, 188, 188, 0.83);
+}
