@@ -15,6 +15,7 @@ export default function Cast() {
           <li className="cast-item" key={person.id}>
             <img
               className="cast-img"
+              alt="cast_member"
               src={'https://image.tmdb.org/t/p/w200' + person.profile_path}
             ></img>
             <p className="cast-name">{person.original_name}</p>

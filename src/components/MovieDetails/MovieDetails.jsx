@@ -13,6 +13,7 @@ export default function MovieDetails() {
       <div className="detail-block">
         <img
           className="detail-img"
+          alt="movie_poster"
           src={'https://image.tmdb.org/t/p/w500' + res.data.poster_path}
         ></img>
         <div>

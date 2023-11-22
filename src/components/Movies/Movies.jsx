@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Suspense } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { HandleMovieSearch } from '../Hooks/HandleMovieSearch';
 import './Movies.css';
 
