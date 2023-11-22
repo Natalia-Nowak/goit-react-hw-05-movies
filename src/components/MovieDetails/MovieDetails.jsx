@@ -1,4 +1,5 @@
 import { useParams, Link, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import { HandleMovieDetails } from '../Hooks/HandleMovieDetails';
 import './MovieDetails.css';
 
@@ -6,7 +7,6 @@ export default function MovieDetails() {
   const { movieId } = useParams();
 
   const res = HandleMovieDetails(movieId);
-  console.log(res);
 
   return (
     <div className="detail-wrapper">
@@ -41,9 +41,11 @@ export default function MovieDetails() {
               Reviews
             </Link>
           </li>
-          <Outlet />
         </ul>
       </div>
+      <Suspense fallback={<div>Loading page...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 }

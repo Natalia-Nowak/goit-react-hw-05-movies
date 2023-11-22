@@ -7,13 +7,12 @@ export default function Cast() {
   const { movieId } = useParams();
 
   const res = HandleCredits(movieId);
-  console.log(res);
 
   return (
     <div>
       <ul className="cast-list">
         {res?.data?.cast?.map(person => (
-          <li className="cast-item" key={res.data.cast.id}>
+          <li className="cast-item" key={person.id}>
             <img
               className="cast-img"
               src={'https://image.tmdb.org/t/p/w200' + person.profile_path}

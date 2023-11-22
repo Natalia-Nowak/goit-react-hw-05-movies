@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import { HandleTrendingMovies } from '../Hooks/HandleTrendingMovies';
 import './Home.css';
 
 export default function Home() {
   const res = HandleTrendingMovies();
-  console.log(res);
+
   return (
     <div className="home-wrapper">
       <h1 className="home-title">Trending today</h1>
@@ -18,6 +19,9 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 }

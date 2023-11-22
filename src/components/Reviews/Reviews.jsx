@@ -7,13 +7,12 @@ export default function Reviews() {
   const { movieId } = useParams();
 
   const res = HandleReviews(movieId);
-  console.log(res);
 
   return (
     <div className="reviews-wrapper">
       <ul className="reviews-list">
         {res?.data?.results?.map(review => (
-          <li className="reviews-item" key={res.data.results.id}>
+          <li className="reviews-item" key={review.id}>
             <p className="reviews-author">{review.author}</p>
             <p className="reviews-content">{review.content}</p>
           </li>

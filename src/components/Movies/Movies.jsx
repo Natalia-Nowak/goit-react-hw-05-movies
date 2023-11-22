@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import { HandleMovieSearch } from '../Hooks/HandleMovieSearch';
 import './Movies.css';
 
@@ -8,12 +9,10 @@ export default function Movies() {
 
   const changeQuery = event => {
     setSearchQuery(event.target.value);
-    console.log(searchQuery);
   };
 
   const res = HandleMovieSearch(searchQuery);
 
-  console.log(res);
   const handleSubmit = async event => {
     event.preventDefault();
   };
